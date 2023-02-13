@@ -1,8 +1,8 @@
 import grid from "gridfs-stream";
 import mongoose from "mongoose";
+const BASE_URL = process.env.BASE_URL;
 
 
-const url = 'http://localhost:8000';
 const conn = mongoose.connection;
 var gfs, gridFsBucket;
 conn.once('open', () => {
@@ -18,7 +18,7 @@ export const uploadFile = async (req, res) => {
         return res.status(404).json("File not found")
     }
 
-    const imageUrl = `${url}/file/${req.file.filename}`;
+    const imageUrl = `${BASE_URL}/file/${req.file.filename}`;
     return res.status(200).json(imageUrl)
 }
 

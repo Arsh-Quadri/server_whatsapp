@@ -1,4 +1,4 @@
-import express, { urlencoded } from "express";
+import express from "express";
 import connection from "./Database/db.js";
 import Route from "./routes/route.js";
 import bodyParser from 'body-parser';

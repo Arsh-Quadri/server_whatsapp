@@ -4,7 +4,7 @@ import { getuser } from "../controller/userController.js";
 import { newConversation, getConversation } from "../controller/conversationContraller.js";
 import { newMessage, getMessage } from "../controller/messageController.js";
 import { getImage, uploadFile } from "../controller/ImageController.js";
-import upload from "../utils/upload";
+import upload from "../utils/upload.js";
 
 const route = express.Router()
 
